@@ -1,0 +1,92 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+  margin: 32px 0 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+  }
+
+  &-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: $color-text;
+
+    &__title {
+      margin-left: 12px;
+      @include font($size: 1.25rem, $height: 1.5rem);
+    }
+  }
+
+  &-search {
+    max-width: 402px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0;
+    @include font($size: 1rem, $height: 1.2rem);
+    -webkit-transition: 100ms;
+    transition: 100ms;
+
+    &__input {
+      margin: 0 16px;
+      padding: 0 0 6px;
+      height: 100%;
+      border-width: 0 0 1px;
+      border-bottom: 1px solid $color-text;
+      flex-basis: 320px;
+      color: $color-text;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        height: 100%;
+        color: #828282;
+      }
+    }
+
+    &__submit {
+      margin: 0 16px;
+      padding: 0;
+      border: 0;
+      background-color: inherit;
+      color: $color-accent;
+      cursor: pointer;
+      @include font($size: 1rem, $height: 1.2rem);
+
+      &:focus,
+      &:hover {
+        outline: none;
+        color: $color-accent-active;
+      }
+    }
+  }
+
+  &-login {
+    &__button {
+      padding: 9px 32px 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: $color-accent;
+      color: $color-light;
+      -webkit-transition: 150ms;
+      transition: 150ms;
+      @include font($size: 1rem, $height: 1.2rem);
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-accent-active;
+      }
+    }
+  }
+}
