@@ -20,6 +20,7 @@ module.exports = (env, options) => {
     devServer: {
       port: 3001,
       hot: !isProduction,
+      historyApiFallback: !isProduction,
     },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.scss'],

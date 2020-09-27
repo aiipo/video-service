@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.navigation {
+  margin: 44px 0 32px;
+  @include font($size: 1.75rem, $height: 2.07rem);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &-link {
+    margin: 0 12px;
+    text-decoration: none;
+
+    &--active {
+      color: $color-accent;
+      border-bottom: 2px solid $color-accent;
+    }
+  }
+}

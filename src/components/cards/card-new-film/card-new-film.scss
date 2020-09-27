@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.card {
+  padding: $card-padding;
+
+  .card-body {
+    position: relative;
+    cursor: pointer;
+
+    &__image,
+    &__logline {
+      border-radius: 8px;
+    }
+
+    &__image {
+      width: 280px;
+      height: 370px;
+      object-fit: contain;
+    }
+
+    &__logline {
+      box-sizing: border-box;
+      position: absolute;
+      padding: 16px;
+      height: 100%;
+      z-index: 10;
+      background: $color-text;
+      color: $color-text-light;
+      @include font($size: 1rem, $height: 1.4rem, $weight: 400);
+      @include transition($parameters: 250ms);
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-title {
+    @include font($size: 1.25rem, $height: 1.5rem);
+  }
+}

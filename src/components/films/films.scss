@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.films {
+
+  &-new__title,
+  &-genres__title {
+    @include font($size: 1.5rem, $height: 1.75rem);
+  }
+
+  &-new {
+    &__title {
+      &:before {
+        content: '🔥';
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-new__cards,
+  &-genres__genres {
+    position: relative;
+    left: -$card-padding;
+    width: $content-width + (2 * $card-padding);
+    display: flex;
+  }
+}

@@ -1,6 +1,29 @@
+@import "variables";
+
 @mixin font($size, $height: $size, $weight: 500, $style: normal) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
   font-style: $style;
+}
+
+@mixin transition($parameters: all 0.5s ease) {
+  -webkit-transition: $parameters;
+  -moz-transition: $parameters;
+  -ms-transition: $parameters;
+  -o-transition: $parameters;
+  transition: $parameters;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin filter($value) {
+  -webkit-filter: $value;
+  -moz-filter: $value;
+  -o-filter: $value;
+  filter: $value;
 }
