@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Первый канал",
+      "imageUrl": "/src/data/channel-icons/1tv.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "Новости (с субтитрами)"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "Давай поженимся"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "Другие новости"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "2x2",
+      "imageUrl": "/src/data/channel-icons/2x2.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "МУЛЬТ ТВ. Сезон 4, 7 серия"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "БУРДАШЕВ. Сезон 1, 20 серия"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "РБК",
+      "imageUrl": "/src/data/channel-icons/rbc.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "ДЕНЬ. Главные темы"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "Главные новости"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "AMEDIA PREMIUM",
+      "imageUrl": "/src/data/channel-icons/amediateka.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "Клиент всегда мёртв"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "Голодные игры: Сойка-пересмешница. Часть I"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "Секс в большом городе"
+        }
+      ]
+    }
+  ]
+}

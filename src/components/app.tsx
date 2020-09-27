@@ -8,8 +8,10 @@ import Header from './header/header';
 import config from '../core';
 import Navigation from './navigation/navigation';
 import Films from './films/films';
+import Channels from './channels/channels';
 import filmsData from '../data/films.data.json';
 import genresData from '../data/genres.data.json';
+import channelsData from '../data/channels.data.json';
 
 const App = (): React.ReactElement => (
   <div className="app">
@@ -22,6 +24,7 @@ const App = (): React.ReactElement => (
       />
       <Route
         path={config.routes.channels.url}
+        render={(): JSX.Element => <Channels channels={channelsData.data} />}
       />
       <Redirect to={config.routes.films.url} />
     </Switch>
