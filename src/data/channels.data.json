@@ -87,6 +87,50 @@
           "program": "Секс в большом городе"
         }
       ]
+    },
+    {
+      "id": "5",
+      "name": "AMEDIA",
+      "imageUrl": "/src/data/channel-icons/amediateka.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "Клиент всегда мёртв"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "Голодные игры: Сойка-пересмешница. Часть II"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "Секс в большом городе 2"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Первый канал",
+      "imageUrl": "/src/data/channel-icons/1tv.png",
+      "schedule": [
+        {
+          "id": 1,
+          "time": "13:00",
+          "program": "Новости (с субтитрами)"
+        },
+        {
+          "id": 2,
+          "time": "14:00",
+          "program": "Давай поженимся"
+        },
+        {
+          "id": 3,
+          "time": "15:00",
+          "program": "Другие новости"
+        }
+      ]
     }
   ]
 }

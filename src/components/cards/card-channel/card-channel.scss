@@ -3,6 +3,7 @@
 
 .card-channel {
   padding: $card-channel-padding;
+  box-sizing: border-box;
   width: 100%;
 
   &-container {

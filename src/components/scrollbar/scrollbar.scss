@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.scroll-host-container {
+  position: relative;
+  height: 100%;
+
+  .scroll-host {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .scroll-bar {
+    position: absolute;
+    right: -8px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $scrollbar-color;
+  }
+
+  .scroll-thumb {
+    position: absolute;
+    top: 0;
+    margin-left: 1px;
+    width: 8px;
+    height: 20px;
+    border-radius: 2px;
+    @include opacity(1);
+    background-color: $scrollbar-thumb-color;
+  }
+}
+
