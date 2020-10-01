@@ -20,3 +20,7 @@ body {
   padding: 0 10px;
   max-width: $content-width;
 }
+
+button:focus {
+  transform: scale(1.05);
+}

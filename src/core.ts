@@ -5,6 +5,10 @@ export interface ConfigInterface {
       name: string;
     };
   };
+
+  localStorage: {
+    [key: string]: string;
+  };
 }
 
 const config: ConfigInterface = {
@@ -17,6 +21,11 @@ const config: ConfigInterface = {
       url: '/channels',
       name: 'Телеканалы',
     },
+  },
+
+  localStorage: {
+    userName: 'userName',
+    userAuthData: 'userAuthData',
   },
 };
 
