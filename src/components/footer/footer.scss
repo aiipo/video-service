@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.footer {
+  margin-top: 40px;
+  padding: 25px 0;
+  background: $bg-light;
+  @include font($size: 1rem, $height: 1.2rem, $weight: 400);
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &-logo {
+    margin-right: 40px;
+  }
+
+  &-container {
+    &__tel {
+      margin: 6px 0 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-link;
+
+    &:hover {
+      color: darken($color-link, 5%);
+    }
+  }
+}

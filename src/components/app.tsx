@@ -10,6 +10,7 @@ import filmsData from '../data/films.data.json';
 import genresData from '../data/genres.data.json';
 import channelsData from '../data/channels.data.json';
 import useAuth from '../hooks/auth.hook';
+import Footer from './footer/footer';
 
 const App = (): React.ReactElement => {
   const auth = useAuth();
@@ -29,6 +30,7 @@ const App = (): React.ReactElement => {
         />
         <Redirect to={config.routes.films.url} />
       </Switch>
+      <Footer />
     </AuthContext.Provider>
   );
 };
