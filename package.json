@@ -20,6 +20,9 @@
     "url": "https://github.com/aiipo/video-service/issues"
   },
   "homepage": "https://github.com/aiipo/video-service#readme",
+  "browserslist": [
+    "last 2 versions"
+  ],
   "devDependencies": {
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
@@ -39,10 +42,15 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "express": "^4.17.1",
     "file-loader": "^6.1.0",
     "html-loader": "^1.3.1",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^0.11.2",
+    "postcss": "^8.1.1",
+    "postcss-focus": "^5.0.1",
+    "postcss-loader": "^4.0.3",
+    "postcss-preset-env": "^6.7.0",
     "sass-loader": "^10.0.2",
     "source-map-loader": "^1.1.0",
     "ts-loader": "^8.0.4",
@@ -54,6 +62,7 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.5",
+    "core-js": "^3.6.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

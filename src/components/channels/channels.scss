@@ -2,6 +2,7 @@
 @import '../../styles/mixins';
 
 .channels {
+  margin-bottom: 40px;
   height: $channel-height;
 
   &__wrapper {

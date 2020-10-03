@@ -21,6 +21,9 @@
 
     &:hover {
       @include filter(brightness(0.8));
+      @media screen\0 {
+        @include opacity(0.8);
+      }
     }
 
     &__emoji {

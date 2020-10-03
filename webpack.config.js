@@ -13,14 +13,16 @@ module.exports = (env, options) => {
     watch: !isProduction,
     entry: ['./src/index.tsx', './src/index.scss'],
     output: {
-      path: path.join(__dirname, '/dist'),
+      path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
-      filename: 'bundle.js',
+      filename: '[name].bundle.js',
     },
     devServer: {
       port: 3001,
       hot: !isProduction,
       historyApiFallback: !isProduction,
+      contentBase: './dist',
+      disableHostCheck: true,
     },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.scss'],
@@ -31,6 +33,9 @@ module.exports = (env, options) => {
           test: /\.(js|ts)x?$/,
           exclude: /node_modules/,
           loader: 'ts-loader',
+          options: {
+            configFile: 'tsconfig.json',
+          },
         },
         {
           test: /\.scss$/i,
@@ -38,7 +43,19 @@ module.exports = (env, options) => {
             MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
+              options: {},
+            },
+            {
+              loader: 'postcss-loader',
               options: {
+                postcssOptions: {
+                  plugins: [
+                    [
+                      'postcss-preset-env',
+                      require('postcss-focus')(),
+                    ],
+                  ],
+                },
               },
             },
             {
@@ -69,10 +86,11 @@ module.exports = (env, options) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: path.resolve('./src/index.html'),
       }),
       new MiniCssExtractPlugin({
-        filename: 'style.css',
+        filename: '[name].css',
+        chunkFilename: '[id].css',
       }),
       new CopyPlugin({
         patterns: [

@@ -11,6 +11,7 @@ import genresData from '../data/genres.data.json';
 import channelsData from '../data/channels.data.json';
 import useAuth from '../hooks/auth.hook';
 import Footer from './footer/footer';
+import 'core-js';
 
 const App = (): React.ReactElement => {
   const auth = useAuth();

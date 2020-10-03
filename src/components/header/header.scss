@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1 0;
+    flex: 1 0 100%;
     @include font($size: 1rem, $height: 1.2rem);
     -webkit-transition: 100ms;
     transition: 100ms;
@@ -59,7 +59,7 @@
       margin: 0 16px;
       padding: 0;
       border: 0;
-      background-color: inherit;
+      background-color: transparent;
       color: $color-accent;
       cursor: pointer;
       @include font($size: 1rem, $height: 1.2rem);
@@ -96,7 +96,7 @@
       @include transition(150ms);
 
       &--auth {
-        background-color: inherit;
+        background-color: transparent;
         color: $color-accent;
 
         &:hover {
