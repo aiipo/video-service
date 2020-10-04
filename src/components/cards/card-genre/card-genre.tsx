@@ -15,7 +15,7 @@ const CardGenre = ({
 }: CardGenreInterface): React.ReactElement => (
   <div className="card-genre">
     <div className="card-genre-container" style={{ background }}>
-      <span className="card-genre-container__emoji">{emoji}</span>
+      <span className="card-genre-container__emoji emoji">{emoji}</span>
       <span className="card-genre-container__genre">{genre}</span>
     </div>
   </div>

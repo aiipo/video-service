@@ -15,7 +15,10 @@ const Films = ({
   <div className="films">
     <div className="films__wrapper wrapper">
       <section className="films-new">
-        <h2 className="films-new__title">Новинки</h2>
+        <h2 className="films-new__title">
+          <span className="emoji">&#x1f525;</span>
+          Новинки
+        </h2>
         <div className="films-new__cards">
           {films.map(({
             id,

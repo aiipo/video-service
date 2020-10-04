@@ -9,15 +9,6 @@
     @include font($size: 1.5rem, $height: 1.75rem);
   }
 
-  &-new {
-    &__title {
-      &:before {
-        content: '🔥';
-        margin-right: 5px;
-      }
-    }
-  }
-
   &-new__cards,
   &-genres__genres {
     position: relative;
