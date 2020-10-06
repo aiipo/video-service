@@ -13,7 +13,23 @@
   &-genres__genres {
     position: relative;
     left: -$card-padding;
-    width: $content-width + (2 * $card-padding);
+    max-width: $content-width + (2 * $card-padding);
+    width: 100%;
     display: flex;
+
+    @include media-tablet {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &:after {
+        content: "";
+        flex: 0 1 33.3%;
+      }
+    }
+
+    @include media-mobile {
+      flex-flow: column;
+      align-items: center;
+    }
   }
 }
