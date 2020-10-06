@@ -60,7 +60,7 @@
       }
 
       & + .svg-search svg {
-        display: block;
+        display: none;
         position: absolute;
         height: $search-height;
         width: 160px;
@@ -93,6 +93,10 @@
             margin: -$search-height 0 0;
             position: relative;
             width: 100%;
+
+            svg {
+              display: block;
+            }
           }
 
           &::placeholder {
