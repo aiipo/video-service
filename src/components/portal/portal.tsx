@@ -1,26 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
-interface PropsType {
+export interface PortalProps {
   children: React.ReactNode;
 }
 
-class Portal extends React.Component<PropsType, {}> {
-  el = document.createElement('div');
+const Portal: React.FC<PortalProps> = ({
+  children,
+}): React.ReactPortal => {
+  const el = useRef(document.createElement('div'));
 
-  componentDidMount(): void {
-    document.body.appendChild(this.el);
-  }
+  useEffect(() => {
+    document.body.appendChild(el.current);
+    return (): void => {
+      document.body.removeChild(el?.current);
+    };
+  }, [el]);
 
-  componentWillUnmount(): void {
-    document.body.removeChild(this.el);
-  }
-
-  render(): React.ReactPortal {
-    const { children } = this.props;
-
-    return ReactDOM.createPortal(children, this.el);
-  }
-}
+  return createPortal(children, el.current);
+};
 
 export default Portal;
