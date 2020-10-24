@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.button {
+  padding: 9px 32px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: $color-accent;
+  color: $color-light;
+  outline: none;
+  transition: 150ms;
+  cursor: pointer;
+
+  &:hover:not([type="submit"]) {
+    background-color: $color-accent-active;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $color-accent;
+
+    &:hover {
+      color: $color-light;
+    }
+  }
+}
