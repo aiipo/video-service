@@ -1,5 +1,15 @@
 import { applyMiddleware, compose, createStore } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 import rootReducer from './reducers/index';
+
+const persistConfig = {
+  key: 'root',
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const initialState = {};
 
@@ -8,11 +18,13 @@ const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] || compo
 export type RootState = ReturnType<typeof rootReducer>;
 
 const store = createStore(
-  rootReducer,
+  persistedReducer,
   initialState,
   composeEnhancers(
     applyMiddleware(),
   ),
 );
 
-export default store;
+const persistor = persistStore(store);
+
+export { store, persistor };
