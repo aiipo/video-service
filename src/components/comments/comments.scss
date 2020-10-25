@@ -47,7 +47,7 @@
 
   &-container {
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
 
     &--empty {
       @include font($size: 2rem, $height: 2.37rem);
