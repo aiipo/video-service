@@ -66,7 +66,19 @@ export default (state = INITIAL_STATE, action): FilmReducerInterface => {
           films: state.films.map((film) => (
             film.id !== filmId
               ? film
-              : { ...film, comments: [...film.comments, { id: film.comments.length + 1, author, comment }] }
+              : {
+                ...film,
+                comments: [
+                  ...film.comments,
+                  {
+                    id: film.comments.length
+                      ? film.comments[film.comments.length - 1].id + 1
+                      : 1,
+                    author,
+                    comment,
+                  },
+                ],
+              }
           )),
         }
         : state;
