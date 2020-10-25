@@ -36,7 +36,7 @@
 
     &__details {
       flex: 3 0;
-      @include font($size: 1.25rem, $height: 1.5rem);
+      @include font($size: 2rem, $height: 2.37rem);
 
       .details-container__name {
         margin-bottom: 8px;
@@ -45,7 +45,7 @@
       .schedules-program {
         padding: 6px 0;
         display: flex;
-        @include font($size: 1rem, $height: 1.2rem, $weight: 400);
+        @include font($size: 1.6rem, $height: 1.896rem, $weight: 400);
 
         &__time {
           margin-right: 16px;

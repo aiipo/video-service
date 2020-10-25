@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.comment {
+  position: relative;
+  margin: 8px 0;
+  padding: 16px;
+  max-width: 780px;
+  width: 100%;
+  background-color: $bg-light;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  &-author {
+    @include font($size: 1.6rem, $height: 1.896rem);
+  }
+
+  &-container {
+    @include font($size: 1.6rem, $height: 1.896rem, $weight: 400);
+  }
+
+  &-remove {
+    position: absolute;
+    top: -8px;
+    left: calc(100% + 15.64px);
+    padding: 5px;
+    @include font($size: 2rem, $height: 2.37rem);
+  }
+}

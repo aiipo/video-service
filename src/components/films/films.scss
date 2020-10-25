@@ -6,7 +6,7 @@
 
   &-new__title,
   &-genres__title {
-    @include font($size: 1.5rem, $height: 1.75rem);
+    @include font($size: 2.4rem, $height: 2.844rem);
   }
 
   &-new__cards,
@@ -16,6 +16,12 @@
     max-width: $content-width + (2 * $card-padding);
     width: 100%;
     display: flex;
+
+    &--empty {
+      position: relative;
+      left: 10px;
+      @include font($size: 2rem, $height: 2.377rem, $weight: 400);
+    }
 
     @include media-tablet {
       flex-wrap: wrap;

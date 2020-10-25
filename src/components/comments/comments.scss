@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.comments {
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &-title {
+    @include font($size: 2rem, $height: 2.37rem);
+    color: $color-text;
+  }
+
+  &-publish,
+  &-container {
+    position: relative;
+    max-width: 780px;
+    width: 100%;
+    display: flex;
+  }
+
+  &-publish {
+    &__message {
+      padding: 16px;
+      min-height: 110px;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      resize: none;
+      @include transparentBackgroundColor($alpha: 0.15, $color: $color-accent);
+      @include font($size: 1.6rem, $height: 1.896rem, $weight: 400);
+
+      &::placeholder {
+        color: $color-accent;
+        opacity: 1;
+      }
+    }
+
+    &__submit {
+      position: absolute;
+      left: calc(100% + 16px);
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-flow: column;
+
+    &--empty {
+      @include font($size: 2rem, $height: 2.37rem);
+    }
+  }
+}

@@ -29,11 +29,12 @@
       position: absolute;
       padding: 16px;
       height: 100%;
+      width: 100%;
       z-index: 10;
       background: $color-text;
       color: $color-text-light;
-      @include font($size: 1rem, $height: 1.4rem, $weight: 400);
-      @include transition($parameters: 250ms);
+      @include font($size: 1.6rem, $height: 2.24rem, $weight: 400);
+      transition: all 250ms ease-in-out;
       opacity: 0;
 
       &:hover {
@@ -44,6 +45,6 @@
 
   &-title {
     max-width: 280px;
-    @include font($size: 1.25rem, $height: 1.5rem);
+    @include font($size: 2rem, $height: 2.377rem);
   }
 }

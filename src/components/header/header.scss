@@ -23,7 +23,7 @@
 
     &__title {
       margin-left: 12px;
-      @include font($size: 1.25rem, $height: 1.5rem);
+      @include font($size: 2rem, $height: 2.37rem);
 
       @include media-tablet {
         display: none;
@@ -38,8 +38,7 @@
     align-items: center;
     justify-content: space-between;
     flex: 1 0 100%;
-    @include font($size: 1rem, $height: 1.2rem);
-    transition: 100ms;
+    @include font($size: 1.6rem, $height: 1.9rem, $weight: 400);
 
     &__input {
       margin: 0 16px;
@@ -126,10 +125,7 @@
       margin: 0 16px;
       padding: 0;
       border: 0;
-      background-color: transparent;
-      color: $color-accent;
-      cursor: pointer;
-      @include font($size: 1rem, $height: 1.2rem);
+      @include font($size: 1.6rem, $height: 1.9rem);
 
       &:focus:not([disabled]),
       &:hover:not([disabled]) {
@@ -149,7 +145,7 @@
   }
 
   &-login {
-    @include font($size: 1rem, $height: 1.2rem);
+    @include font($size: 1.6rem, $height: 1.9rem, $weight: 400);
     display: flex;
     align-items: center;
 
@@ -165,37 +161,12 @@
         border-bottom: 1px solid;
       }
     }
-
-    &__button {
-      padding: 9px 32px 10px;
-      border: none;
-      border-radius: 4px;
-      background-color: $color-accent;
-      color: $color-light;
-      outline: none;
-      @include transition(150ms);
-
-      &--auth {
-        background-color: transparent;
-        color: $color-accent;
-
-        &:hover {
-          cursor: pointer;
-          color: $color-accent-active;
-        }
-      }
-
-      &:hover:not(&--auth) {
-        cursor: pointer;
-        background-color: $color-accent-active;
-      }
-    }
   }
 
   &-auth-form {
     display: flex;
     flex-flow: column;
-    @include font($size: 1rem, $height: 1.2rem);
+    @include font($size: 1.6rem, $height: 1.9rem);
 
     &-container {
       input:not([type="checkbox"]) {

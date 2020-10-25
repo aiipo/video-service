@@ -35,7 +35,7 @@
     width: 8px;
     height: 20px;
     border-radius: 2px;
-    @include opacity(1);
+    opacity: 1;
     background-color: $scrollbar-thumb-color;
   }
 }

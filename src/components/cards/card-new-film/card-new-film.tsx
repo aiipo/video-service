@@ -8,12 +8,17 @@ export interface CardNewFilmInterface {
   imageUrl: string;
 }
 
+export interface CardNewFilmProps extends CardNewFilmInterface {
+  onClick?: () => void;
+}
+
 const CardNewFilm = ({
   title,
   logline,
   imageUrl,
-}: CardNewFilmInterface): React.ReactElement => (
-  <div className="card">
+  onClick = (): void => {},
+}: CardNewFilmProps): React.ReactElement => (
+  <div className="card" onClick={onClick} role="presentation">
     <div className="card-body">
       <div className="card-body__logline">{logline}</div>
       <img className="card-body__image" src={imageUrl} alt={title} />

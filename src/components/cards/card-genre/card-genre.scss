@@ -5,8 +5,7 @@
   padding: $card-padding;
   color: $color-light;
   user-select: none;
-  @include opacity(0.8);
-  @include transition(5s);
+  opacity: 0.8;
 
   &-container {
     height: 208px;
@@ -18,21 +17,22 @@
     cursor: pointer;
     border-radius: 6px;
     box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease-in-out;
 
     &:hover {
-      @include filter(brightness(0.8));
+      filter: brightness(0.8);
       @media screen\0 {
-        @include opacity(0.8);
+        opacity: 0.8;
       }
     }
 
     &__emoji {
       padding: 32px;
-      @include font($size: 3rem, $height: 3.6rem, $weight: 400);
+      @include font($size: 4.8rem, $height: 5.688rem, $weight: 400);
     }
 
     &__genre {
-      @include font($size: 1.25rem, $height: 1.5rem, $weight: 400);
+      @include font($size: 2rem, $height: 2.377rem, $weight: 400);
     }
   }
 }

@@ -50,5 +50,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-redeclare': 'off',
     '@typescript-eslint/no-shadow': 'off',
+    'max-len': ['error', { code: 120 }],
+    "react/jsx-props-no-spreading": "off",
   },
 };

@@ -6,9 +6,6 @@ import Navigation from './navigation/navigation';
 import Films from './films/films';
 import Channels from './channels/channels';
 import AuthContext from '../contexts/auth.context';
-import filmsData from '../data/films.data.json';
-import genresData from '../data/genres.data.json';
-import channelsData from '../data/channels.data.json';
 import useAuth from '../hooks/auth.hook';
 import Footer from './footer/footer';
 import 'core-js';
@@ -23,11 +20,11 @@ const App = (): React.ReactElement => {
       <Switch>
         <Route
           path={config.routes.films.url}
-          render={(): JSX.Element => <Films films={filmsData.data} genres={genresData.data} />}
+          component={Films}
         />
         <Route
           path={config.routes.channels.url}
-          render={(): JSX.Element => <Channels channels={channelsData.data} />}
+          component={Channels}
         />
         <Redirect to={config.routes.films.url} />
       </Switch>

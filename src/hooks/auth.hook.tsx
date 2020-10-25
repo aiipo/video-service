@@ -13,11 +13,14 @@ const useAuth = (): UseAuthResult => {
   const [name, setName] = useState<UseAuthResult['name']>('');
   const [token, setToken] = useState<UseAuthResult['token']>('');
 
-  const login: UseAuthResult['login'] = useCallback((token, name) => {
-    setName(name);
-    setToken(token);
+  const login: UseAuthResult['login'] = useCallback((token, userName) => {
+    const name = userName.trim();
+    if (token && name) {
+      setName(name);
+      setToken(token);
 
-    localStorage.setItem(config.localStorage.userName, name);
+      localStorage.setItem(config.localStorage.userName, name);
+    }
   }, []);
 
   const logout: UseAuthResult['logout'] = useCallback(() => {
@@ -25,10 +28,13 @@ const useAuth = (): UseAuthResult => {
     setToken('');
   }, []);
 
-  const changeName: UseAuthResult['changeName'] = useCallback((name) => {
-    setName(name);
+  const changeName: UseAuthResult['changeName'] = useCallback((newName) => {
+    const name = newName.trim();
+    if (name) {
+      setName(name);
 
-    localStorage.setItem(config.localStorage.userName, name);
+      localStorage.setItem(config.localStorage.userName, name);
+    }
   }, []);
 
   return { login, logout, name, token, changeName };

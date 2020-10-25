@@ -1,13 +1,10 @@
 import React from 'react';
-import CardChannel, { CardChannelInterface } from '../cards/card-channel/card-channel';
+import CardChannel from '../cards/card-channel/card-channel';
 import './channels.scss';
 import Scrollbar from '../scrollbar/scrollbar';
+import { data as channels } from '../../data/channels.data.json';
 
-interface ChannelsInterface {
-  channels: CardChannelInterface[];
-}
-
-const Channels = ({ channels }: ChannelsInterface): React.ReactElement => (
+const Channels = (): React.ReactElement => (
   <div className="channels">
     <div className="channels__wrapper wrapper">
       <Scrollbar>
