@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+
+.carousel {
+  position: relative;
+  width: 100%;
+
+  &-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &-left,
+  &-right {
+    position: absolute;
+    top: 0;
+    height: 80%;
+    z-index: 10;
+    @include font($size: 2.4rem);
+  }
+
+  &-right {
+    right: 0;
+  }
+}

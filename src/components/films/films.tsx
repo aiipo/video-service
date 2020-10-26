@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CardNewFilm from '../cards/card-new-film/card-new-film';
 import CardGenre from '../cards/card-genre/card-genre';
+import Carousel from '../carousel/carousel';
 import { selectFilmSelected, selectFilmsSearched } from '../../redux/selectors/film.selectors';
 import { data as genres } from '../../data/genres.data.json';
 import FilmDetails from '../film-details/film-details';
@@ -27,23 +28,25 @@ const Films = (): React.ReactElement => {
                   Новинки
                 </h2>
                 <div className="films-new__cards">
-                  {films.length
-                    ? films.map(({
-                      id,
-                      title,
-                      logline,
-                      imageUrl,
-                    }) => (
-                      <CardNewFilm
-                        onClick={(): void => handleSelectFilm(id)}
-                        key={id}
-                        id={id}
-                        title={title}
-                        logline={logline}
-                        imageUrl={imageUrl}
-                      />
-                    ))
-                    : <p className="films-new__cards--empty">Фильмы не найдены</p>}
+                  <Carousel>
+                    {films.length
+                      ? films.map(({
+                        id,
+                        title,
+                        logline,
+                        imageUrl,
+                      }) => (
+                        <CardNewFilm
+                          onClick={(): void => handleSelectFilm(id)}
+                          key={id}
+                          id={id}
+                          title={title}
+                          logline={logline}
+                          imageUrl={imageUrl}
+                        />
+                      ))
+                      : <p className="films-new__cards--empty">Фильмы не найдены</p>}
+                  </Carousel>
                 </div>
               </section>
               <section className="films-genres">
